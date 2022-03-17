@@ -11,12 +11,12 @@ module "vpc" {
   single_nat_gateway   = true
   enable_dns_hostnames = true
 
-  public_subnet_tag = {
+  public_subnet_tags = {
     "kubernetes.io/cluster/${var.eks_cluster_name}" = "shared"
     "kubernetes.io/role/elb"                      = "1"
   }
 
-  private_subnet_tag = {
+  private_subnet_tags = {
     "kubernetes.io/cluster/${var.eks_cluster_name}" = "shared"
     "kubernetes.io/role/internal-elb"             = "1"
   }
