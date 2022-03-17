@@ -27,7 +27,7 @@ module "eks" {
       desired_size = var.eks_cluster_node_blue_desired_size
       instance_types = var.eks_cluster_blue_instances_type
       capacity_type  = var.eks_cluster_blue_capacity_type
-      tags = {
+      tag = {
         Environment = "test"
       }
     }
@@ -37,7 +37,7 @@ module "eks" {
       desired_size = var.eks_cluster_node_green_desired_size
       instance_types = var.eks_cluster_green_instances_type
       capacity_type  = var.eks_cluster_green_capacity_type
-      tags = {
+      tag = {
         Environment = "prod"
       }
     }
