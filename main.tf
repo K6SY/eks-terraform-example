@@ -2,7 +2,7 @@ module "terraform_state_backend" {
     source = "cloudposse/tfstate-backend/aws"
     # Cloud Posse recommends pinning every module to a specific version
     # version     = "x.x.x"
-    namespace  = "eg"
+    namespace  = "k6sy"
     stage      = "test"
     name       = "terraform"
     attributes = ["state"]
